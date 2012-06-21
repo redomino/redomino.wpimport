@@ -1,0 +1,37 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:transmogrifier="http://namespaces.plone.org/transmogrifier"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  i18n_domain="collective.transmogrifier">
+
+<!-- -*- Beyond here there be dragons! -*- -->
+
+<utility component=".blueprints.Source"
+    name="redomino.wpimport.source" />
+<utility component=".blueprints.Dictify"
+    name="redomino.wpimport.dictify" />
+<utility component=".blueprints.GetWPType"
+    name="redomino.wpimport.getwptype" />
+<utility component=".blueprints.BinaryData"
+    name="redomino.wpimport.binarydata" />
+<utility component=".blueprints.Relinker"
+    name="redomino.wpimport.relinker" />
+<utility component="collective.transmogrifier.sections.tests.PrettyPrinter"
+    name="collective.transmogrifier.sections.tests.pprinter" />
+
+<transmogrifier:registerConfig
+  name="redomino.wpimport.import"
+  title="Wordpress Import"
+  description=""
+  configuration="import.cfg"
+  />
+<transmogrifier:registerConfig
+  name="redomino.wpimport.binarydata-import"
+  title="Wordpress Import (Binary Data)"
+  description=""
+  configuration="binarydata-import.cfg"
+  />
+
+
+</configure>

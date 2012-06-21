@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="redomino.wpimport">
+
+
+    <browser:page 
+            name="wordpress-import"
+            class=".wpimport_view.WordpressImportFormView"
+            for="*"
+            permission="cmf.ManagePortal" />
+
+</configure>

@@ -1,0 +1,8 @@
+TODO LIST
+==========
+
+* complete the feature "take ownership"
+* add some feedbacks for the end user
+* add all tests
+* improve the relinker step: now it tries to update images only, it should update all internal links
+* add i18n
